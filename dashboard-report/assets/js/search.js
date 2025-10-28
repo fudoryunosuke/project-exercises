@@ -43,7 +43,15 @@ function showDetail(d) {
   document.getElementById("gps").textContent = d.gps;
   document.getElementById("size").textContent = d.size;
   document.getElementById("damage-image").src = d.image;
+  document.getElementById('inspectionTime').textContent = d.inspectionTime || '';
+  document.getElementById('patrolTeam').textContent = d.patrolTeam || '';
+  document.getElementById('vehicle').textContent = d.vehicle || '';
+  document.getElementById('weather').textContent = d.weather || '';
+  document.getElementById('inspectionSection').textContent = d.inspectionSection || '';
+  document.getElementById('temporaryRepair').textContent = d.temporaryRepair || '';
+  
 
+  
   const voice = document.getElementById("voice");
   if(d.voice) { voice.src = d.voice; voice.style.display = 'block'; }
   else { voice.style.display = 'none'; }
