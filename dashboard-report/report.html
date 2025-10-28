@@ -45,34 +45,50 @@
       <h2>現場確認・記録用</h2>
     </div>
 
-    <!-- 詳細情報 -->
-    <div id="reportDetails">
+    <!-- 基本詳細情報 -->
+    <div id="reportDetails" class="grid grid-cols-2 gap-2 p-2 bg-gray-100 border rounded">
       <div><span class="font-semibold">種類:</span> <span id="r-type"></span></div>
       <div><span class="font-semibold">損傷度:</span> <span id="r-severity"></span></div>
       <div><span class="font-semibold">日付:</span> <span id="r-date"></span></div>
       <div><span class="font-semibold">GPS:</span> <span id="r-gps"></span></div>
       <div><span class="font-semibold">大きさ:</span> <span id="r-size"></span></div>
+      <div><span class="font-semibold">実施日時:</span> <span id="r-inspectionTime"></span></div>
+      <div><span class="font-semibold">パトロール班:</span> <span id="r-patrolTeam"></span></div>
+      <div><span class="font-semibold">車両情報:</span> <span id="r-vehicle"></span></div>
+      <div><span class="font-semibold">天候:</span> <span id="r-weather"></span></div>
+      <div><span class="font-semibold">点検区間:</span> <span id="r-inspectionSection"></span></div>
+      <div><span class="font-semibold">応急処置:</span> <span id="r-temporaryRepair"></span></div>
     </div>
 
     <!-- 画像 -->
-    <div class="report-section image-frame">
+    <div class="report-section image-frame mt-4">
       <img id="r-image" src="" alt="損傷画像">
     </div>
 
     <!-- 文字起こしメモ -->
-    <div class="report-section">
+    <div class="report-section mt-4">
       <h3>文字起こしメモ</h3>
       <p id="r-voiceText"></p>
     </div>
 
-    <!-- 担当者コメント -->
-    <div class="report-section">
-      <h3>担当者コメント</h3>
-      <textarea id="r-comment" rows="4" placeholder="現場確認結果や対応方針などを記入"></textarea>
+    <!-- 担当者コメント + 確認印欄を横並び -->
+    <div class="flex gap-4 mt-2">
+      <!-- 担当者コメント -->
+      <div class="report-section flex-1">
+        <h3>担当者コメント</h3>
+        <textarea id="r-comment" rows="4" placeholder="現場確認結果や対応方針などを記入"></textarea>
+      </div>
+
+      <!-- 確認印欄 -->
+      <div class="report-section w-32 flex flex-col items-center justify-center">
+        <h3>確認印欄</h3>
+        <div class="stamp-box mt-2"></div>
+        <p class="text-sm mt-1">担当者</p>
+      </div>
     </div>
 
     <!-- フッター -->
-    <footer>
+    <footer class="mt-4 text-right">
       作成日: <span id="reportDate"></span>
     </footer>
   </section>
