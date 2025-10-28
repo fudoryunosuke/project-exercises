@@ -66,28 +66,37 @@
   </div>
 
   <!-- 損傷詳細カード -->
-  <div id="damage-card" class="hidden p-6 flex-1 flex flex-col gap-4 overflow-y-auto max-h-[750px]">
-      <img id="damage-image" src="" alt="損傷画像" class="mb-4">
+  <!-- 損傷詳細カード -->
+<div id="damage-card" class="hidden p-6 flex-1 flex flex-col gap-4 overflow-y-auto max-h-[750px]">
+  <img id="damage-image" src="" alt="損傷画像" class="mb-4">
 
-      <div id="damage-info" class="grid grid-cols-2 gap-4">
-        <div class="detail-row"><span class="detail-label">種類:</span> <span class="detail-value" id="type"></span></div>
-        <div class="detail-row"><span class="detail-label">損傷度:</span> <span class="detail-value" id="severity"></span></div>
-        <div class="detail-row"><span class="detail-label">日付:</span> <span class="detail-value" id="date"></span></div>
-        <div class="detail-row"><span class="detail-label">GPS:</span> <span class="detail-value" id="gps"></span></div>
-        <div class="detail-row"><span class="detail-label">大きさ:</span> <span class="detail-value" id="size"></span></div>
-      </div>
-
-      <div class="card-section mt-4">
-        <h3 class="font-bold text-yellow-400 mb-2">文字起こしメモ</h3>
-        <p id="voice-text" class="bg-gray-800 border border-gray-700 rounded-lg p-3 text-lg whitespace-pre-wrap"></p>
-      </div>
-
-      <div class="card-section mt-4">
-        <h3 class="font-bold text-yellow-400 mb-2">ボイスメモ</h3>
-        <audio id="voice" controls class="w-full"></audio>
-      </div>
-    </div>
+  <div id="damage-info" class="grid grid-cols-2 gap-4">
+    <div class="detail-row"><span class="detail-label">種類:</span> <span class="detail-value" id="type"></span></div>
+    <div class="detail-row"><span class="detail-label">損傷度:</span> <span class="detail-value" id="severity"></span></div>
+    <div class="detail-row"><span class="detail-label">日付:</span> <span class="detail-value" id="date"></span></div>
+    <div class="detail-row"><span class="detail-label">GPS:</span> <span class="detail-value" id="gps"></span></div>
+    <div class="detail-row"><span class="detail-label">大きさ:</span> <span class="detail-value" id="size"></span></div>
+    <!-- 追加情報 -->
+    <div class="detail-row"><span class="detail-label">実施日時:</span> <span class="detail-value" id="inspectionTime"></span></div>
+    <div class="detail-row"><span class="detail-label">パトロール班:</span> <span class="detail-value" id="patrolTeam"></span></div>
+    <div class="detail-row"><span class="detail-label">車両:</span> <span class="detail-value" id="vehicle"></span></div>
+    <div class="detail-row"><span class="detail-label">天候:</span> <span class="detail-value" id="weather"></span></div>
+    <div class="detail-row"><span class="detail-label">点検区間:</span> <span class="detail-value" id="inspectionSection"></span></div>
+    <div class="detail-row"><span class="detail-label">応急処置:</span> <span class="detail-value" id="temporaryRepair"></span></div>
+    
   </div>
+
+  <div class="card-section mt-4">
+    <h3 class="font-bold text-yellow-400 mb-2">文字起こしメモ</h3>
+    <p id="voice-text" class="bg-gray-800 border border-gray-700 rounded-lg p-3 text-lg whitespace-pre-wrap"></p>
+  </div>
+
+  <div class="card-section mt-4">
+    <h3 class="font-bold text-yellow-400 mb-2">ボイスメモ</h3>
+    <audio id="voice" controls class="w-full"></audio>
+  </div>
+</div>
+
 
   <p id="no-selection" class="text-gray-400 text-center mt-4">検索結果から損傷を選択してください。</p>
 </main>
